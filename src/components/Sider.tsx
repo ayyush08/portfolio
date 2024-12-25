@@ -8,7 +8,7 @@ import {
     IconUserBolt,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import me from '../../assets/p.jpg'
@@ -52,39 +52,52 @@ export function SidebarDemo() {
     return (
         <BackgroundBeamsWithCollision className='min-h-screen min-w-full  mx-auto flex '>
 
-        <div
-            className={cn(
-                "rounded-md flex flex-col md:flex-row bg-gray-100 dark:bg-violet-800 dark:bg-opacity-25 min-w-full flex-1 max-w-7xl mx-0 border border-neutral-200 dark:border-neutral-700 overflow-hidden",
-                "h-screen" 
-            )}
-        >
-            <Sidebar open={open} setOpen={setOpen}>
-                <SidebarBody className="justify-between gap-10">
-                    <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-                        {open ? <Logo /> : <LogoIcon />}
-                        <div className="mt-8 flex flex-col gap-2">
-                            {links.map((link, idx) => (
-                                <SideButton
-                                key={idx}
-                                    label={link.label}
-                                    icon={link.icon}
-                                    component={link.component}
-                                    setComponent={setComponent}/>
-                            ))}
+            <div
+                className={cn(
+                    "rounded-md flex flex-col md:flex-row bg-gray-100 dark:bg-violet-800 dark:bg-opacity-25 min-w-full flex-1 max-w-7xl mx-0 border border-neutral-200 dark:border-neutral-700 overflow-hidden",
+                    "h-screen"
+                )}
+            >
+                <Sidebar open={open} setOpen={setOpen}>
+                    <SidebarBody className="justify-between gap-10">
+                        <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+                            {open ? <Logo /> : <LogoIcon />}
+                            <div className="mt-8 flex flex-col gap-2">
+                                {links.map((link, idx) => (
+                                    <SideButton
+                                        key={idx}
+                                        label={link.label}
+                                        icon={link.icon}
+                                        component={link.component}
+                                        setComponent={setComponent} />
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                </SidebarBody>
-            </Sidebar>
-            {component}
+                    </SidebarBody>
+                </Sidebar>
+            <div className="flex flex-1 overflow-hidden">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={component.type.name} 
+                        initial={{ y: 300, opacity: 0 }} // Start from below
+                        animate={{ y: 0, opacity: 1 }} // Slide to center
+                        exit={{ y: -300, opacity: 0 }} // Slide upwards on exit
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="flex-1 p-4"
+                    >
+                        {component}
+                    </motion.div>
+                </AnimatePresence>
+            </div>
         </div>
-</BackgroundBeamsWithCollision>
+</BackgroundBeamsWithCollision >
     );
 }
 export const Logo = () => {
     return (
         <Link
-        href="#"
-        className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
+            href="#"
+            className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
         >
             <Image
                 src={me}

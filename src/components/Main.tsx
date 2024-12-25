@@ -6,7 +6,7 @@ import { TextGenerateEffect } from './ui/text-generate-effect';
 const Main = () => {
     return (
         <>
-        <div className="flex mx-auto flex-col md:flex-row items-center justify-center min-h-screen px-6 py-10">
+        <div className="flex mx-auto flex-col md:flex-row items-center justify-center min-h-screen px-6 py-4">
 
             {/* Text Section */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-xl space-y-4">
