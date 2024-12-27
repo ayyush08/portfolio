@@ -17,6 +17,7 @@ import SideButton from "./SideButton";
 import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
 import About from "./About";
 export function SidebarDemo() {
+    
     const links = [
         {
             label: "Home",
