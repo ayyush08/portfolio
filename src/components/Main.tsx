@@ -10,8 +10,8 @@ const Main = () => {
 
             {/* Text Section */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-xl space-y-4">
-                <TextGenerateEffect className="text-3xl md:text-5xl font-extrabold leading-snug" words={"Hi there! I'm"} />
-                <TextGenerateEffect className="text-3xl md:text-5xl font-extrabold leading-snug text-red-500" words={"Ayush Kumar Gupta"} />
+                <TextGenerateEffect  className="text-3xl md:text-5xl font-extrabold leading-snug" words={"Hi there! I'm"} />
+                <TextGenerateEffect  className="text-3xl md:text-5xl font-extrabold leading-snug text-red-500" words={"Ayush Kumar Gupta"} />
                 <p className="text-violet-300 text-sm md:text-lg leading-relaxed">
                 A problem-solving developer driven by a passion for programming, with an insatiable eagerness to learn and adapt to new technologies continuously.
                 </p>

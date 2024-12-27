@@ -12,10 +12,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import me from '../../assets/p.jpg'
-import Ayush from "@/app/ayush/page";
 import Main from "./Main";
 import SideButton from "./SideButton";
 import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
+import About from "./About";
 export function SidebarDemo() {
     const links = [
         {
@@ -27,7 +27,7 @@ export function SidebarDemo() {
         },
         {
             label: "About Me",
-            component: <Ayush />,
+            component: <About />,
             icon: (
                 <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
             ),
