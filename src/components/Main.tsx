@@ -10,9 +10,9 @@ const Main = () => {
 
             {/* Text Section */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-xl space-y-4">
-                <TextGenerateEffect  className="text-3xl md:text-5xl font-extrabold leading-snug" words={"Hi there! I'm"} />
-                <TextGenerateEffect  className="text-3xl md:text-5xl font-extrabold leading-snug text-red-500" words={"Ayush Kumar Gupta"} />
-                <p className="text-violet-300 text-sm md:text-lg leading-relaxed">
+                <TextGenerateEffect  className="text-3xl tex rampart-one-regular md:text-4xl  font-extrabold leading-snug text-yellow-100" words={"Hi there! I'm"} />
+                <TextGenerateEffect  className="text-3xl rampart-one-regular   md:text-5xl font-extrabold leading-snug text-orange-300" words={"Ayush Kumar Gupta"} />
+                <p className="text-purple-300  font-sans  text-sm md:text-lg font-semibold italic ">
                 A problem-solving developer driven by a passion for programming, with an insatiable eagerness to learn and adapt to new technologies continuously.
                 </p>
             </div>
