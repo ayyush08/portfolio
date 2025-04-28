@@ -7,16 +7,16 @@ const config: Config = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     darkMode: "class",
-    theme: {
-        extend: {
-            colors: {
-                background: "var(--background)",
-                foreground: "var(--foreground)",
-                primary: "var(--primary)",
-                card: "var(--card)",
-            },
-        },
-    },
+    // theme: {
+    //     extend: {
+    //         colors: {
+    //             background: "var(--background)",
+    //             foreground: "var(--foreground)",
+    //             primary: "var(--primary)",
+    //             card: "var(--card)",
+    //         },
+    //     },
+    // },
     
 };
 export default config;
